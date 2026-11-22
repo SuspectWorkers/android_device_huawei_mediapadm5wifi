@@ -1,0 +1,13 @@
+on init && property:ro.boot.product.hardware.sku=SHT-W09
+    setprop ro.carrier  "wifi-only"
+
+on init && property:ro.boot.product.hardware.sku=CMR-W09
+    setprop ro.carrier  "wifi-only"
+
+on init && property:ro.boot.product.hardware.sku=CMR-W19
+    setprop ro.carrier  "wifi-only"
+
+on property:sys.boot_completed=1
+    setprop persist.radio.noril 1
+
+
